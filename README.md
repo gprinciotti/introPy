@@ -8,3 +8,4 @@
  2. [ ] Introduction to Python (DataCamp): https://www.datacamp.com/courses/intro-to-python-for-data-science (only the NumPy part)
  3. [ ] "Studying Python" (Beatriz Milz): https://beatrizmilz.com/blog/2021-python-serie/
  4. [ ] Solutions for the problem sets used in the Econometrics course given by Rudi Rocha at FGV EAESP
+ 5. [ ] Learn more about Virtual Environments: https://towardsdatascience.com/virtual-environments-104c62d48c54

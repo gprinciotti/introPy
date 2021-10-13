@@ -1,1 +1,5 @@
 colorama
+numpy
+pandas
+matplotlib
+seaborn
