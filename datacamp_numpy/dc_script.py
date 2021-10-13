@@ -125,3 +125,113 @@ print(np_2d[0][2]) # after select the row, you do another selection (in column)
 print(np_2d[0, 2]) # you can use comma two (row, column)
 print(np_2d[:,1:3]) # you arent selecting anything in row, but in columns
 print(np_2d[1,:]) # you arent selecting anything in columns, but in rows
+
+# seventh
+
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
+
+# Create a 2D numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the type of np_baseball
+print(type(np_baseball))
+
+# Print out the shape of np_baseball
+print(np_baseball.shape)
+
+# eighth
+
+# Create a 2D numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the shape of np_baseball
+print(np_baseball.shape)
+
+# nineth
+
+# Print out the 4th row of np_baseball
+print(np_baseball[3])
+
+# Select the entire second column of np_baseball: np_weight_lb
+np_weight_lb = np_baseball[:,1]
+
+# Print out height of 2nd player
+print(np_baseball[1,0:1])
+
+# tenth
+# i forgot to copy the original data :(
+
+# # Print out addition of np_baseball and updated
+# print(np_baseball + updated)
+
+# # Create numpy array: conversion
+# conversion = [0.0254, 0.453592, 1]
+
+# # Print out product of np_baseball and conversion
+# print(np_baseball * conversion)
+
+# statistics operations with numpy
+
+print(np.mean(np_baseball[:, 0])) # mean
+print(np.median(np_baseball[:, 1])) # median
+print(np.std(np_baseball[:, 0])) # standard deviation
+print(np.corrcoef(np_baseball[:, 0], np_baseball[:, 1])) # correlation matrix
+
+# you can also use sum(), sort() and others
+
+# generating random samples
+height = np.round(np.random.normal(1.75, 0.20, 5000), 2)
+weight = np.round(np.random.normal(60.32, 15, 5000), 2)
+np_city = np.column_stack((height, weight))
+
+# eleventh
+
+# Create np_height_in from np_baseball
+np_height_in = np_baseball[:,0]
+
+# Print out the mean of np_height_in
+print(np.mean(np_height_in))
+
+# Print out the median of np_height_in
+print(np.median(np_height_in))
+
+# twelfth
+
+# Print mean height (first column)
+avg = np.mean(np_baseball[:,0])
+print("Average: " + str(avg))
+
+# Print median height. Replace 'None'
+med = np.median(np_baseball[:,0])
+print("Median: " + str(med))
+
+# Print out the standard deviation on height. Replace 'None'
+stddev = np.std(np_baseball[:,0])
+print("Standard Deviation: " + str(stddev))
+
+# Print out correlation between first and second column. Replace 'None'
+corr = np.corrcoef(np_baseball[:, 0], np_baseball[:, 1])
+print("Correlation: " + str(corr))
+
+# thirteenth
+# i forgot to copy the original data :(
+
+# # Convert positions and heights to numpy arrays: np_positions, np_heights
+# np_positions = np.array(positions)
+# np_heights = np.array(heights)
+
+# # Heights of the goalkeepers: gk_heights
+# gk_heights = np_heights[np_positions == "GK"]
+
+# # Heights of the other players: other_heights
+# other_heights = np_heights[np_positions != "GK"]
+
+# # Print out the median height of goalkeepers. Replace 'None'
+# print("Median height of goalkeepers: " + str(np.median(gk_heights)))
+
+# # Print out the median height of other players. Replace 'None'
+# print("Median height of other players: " + str(np.median(other_heights)))
