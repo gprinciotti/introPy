@@ -8,7 +8,7 @@ a = 5
 b = 36/1000
 
 # number of simulations (you can change it too)
-sim = 100
+sim = 1000
 
 # generating "fixed" data
 id = np.array(list(range(1, 1001, 1)))
@@ -29,7 +29,7 @@ for sim in range(1, sim, 1):
     # final dataframe
     data = np.column_stack((id, x, u, y))
 
-    # important math
+    # doing some important mat
     x_diff = data[:, 1] - np.mean(data[:, 1]) # xi - xbar
     x_diff_sqr = x_diff ** 2 # (xi - xbar) ^ 2
 
@@ -56,7 +56,8 @@ print(round(np.mean(aux_a_hat), 5))
 
 # graph
 sns_plot = sns.displot(aux_b_hat) # dist
+sns_plot.set_axis_labels(x_var="Estimated betas", y_var="Count")
 plt.axvline(np.mean(aux_b_hat), linestyle = "--", color = "red") # estimated parameter
 plt.axvline(0.036, linestyle = "-", color = "black") # population parameter
-plt.legend(("est. param.", "pop. param."))
-sns_plot.savefig("listas_econometria\lista1\output_mc_beta.png") # saving
+plt.legend(("est. param. (average)", "pop. param."))
+sns_plot.savefig("listas_econometria\outputs\mc_beta.png") # saving
